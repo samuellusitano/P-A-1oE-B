@@ -1,0 +1,170 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPC0NehXioVVh+50sXbKBVf",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/samuellusitano/P-A-1oE-B/blob/main/aula%20p%26a\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 43,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zSIvpQcheysm",
+        "outputId": "0789f751-2b41-43d0-a61c-39931e4d7aa1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o seu nome: Sam\n",
+            "Digite sua idade: 15\n",
+            "Digite o mês em que você nasceu (1 a 12): 1\n",
+            "Digite o dia em que você nasceu: 4\n",
+            "Bem Vindo(a) Sam, seja bem vindo(a)!\n",
+            "Você nasceu no dia 4, do mês 1 de 2011\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escrever um cadastro de usuário\n",
+        "# Entrada : nome e idade\n",
+        "# Processamento : armazenar os dados do usuário\n",
+        "# Saída : Mostra uma mensagem de boas vindas e o nome e a idade do usuário\n",
+        "\n",
+        "# Entrada\n",
+        "\n",
+        "nome = str (input(\"Digite o seu nome: \"))\n",
+        "idade = int(input(\"Digite sua idade: \"))\n",
+        "meses = int(input(\"Digite o mês em que você nasceu (1 a 12): \"))\n",
+        "dia = int(input(\"Digite o dia em que você nasceu: \"))\n",
+        "\n",
+        "# Processamento\n",
+        "\n",
+        "data = 2026 - idade\n",
+        "condição = 3 - meses\n",
+        "if condição < 0:\n",
+        "  data -= 1\n",
+        "\n",
+        "\n",
+        "\n",
+        "# Saída\n",
+        "\n",
+        "print (f\"Bem Vindo(a) {nome}, seja bem vindo(a)!\")\n",
+        "print (f\"Você nasceu no dia {dia}, do mês {meses} de {data}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Escrever um algorítmo que calcula o triplo de um número\n"
+      ],
+      "metadata": {
+        "id": "1zgqiCBahU9F"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Determinar o triplo de um número\n",
+        "\n",
+        "# Entrada\n",
+        "\n",
+        "brr = float (input(\"Digite o número a ser triplicado: \"))\n",
+        "\n",
+        "# Processamento\n",
+        "\n",
+        "resultado = brr * 3\n",
+        "\n",
+        "# Saída\n",
+        "\n",
+        "print(f\"{brr} triplicado é igual a {resultado}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SlWbEO50hY9T",
+        "outputId": "a43cf40b-2ecc-4e48-f38c-8775e4b0346a"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o número a ser triplicado: 7.5\n",
+            "7.5 triplicado é igual a 22.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Programa que converte a temperatura"
+      ],
+      "metadata": {
+        "id": "KgKoI83EoEQt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Entrada\n",
+        "\n",
+        "temp = float(input(\"Digite a temperatura (°C): \"))\n",
+        "\n",
+        "# Processamento\n",
+        "\n",
+        "fare = temp * 9 / 5 + 32\n",
+        "\n",
+        "# Saída\n",
+        "\n",
+        "print(f\"A temperatura em graus farenheit é {fare}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CLEGptAgoHMd",
+        "outputId": "c9aa9f23-bc0f-4300-9b89-ebdfb31a3092"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a temperatura (°C): 70\n",
+            "A temperatura em graus farenheit é 158.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
