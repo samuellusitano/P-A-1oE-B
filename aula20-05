@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOrjHyWeOykT9N4pWX7w194",
+      "authorship_tag": "ABX9TyMf4IO9kMr9iRM+zPLmAynL",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,7 +28,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 8,
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
@@ -84,7 +84,7 @@
         "id": "mIm-DrwU73-W",
         "outputId": "1a9f5263-c48e-45ad-d410-dd4a62ce8f4f"
       },
-      "execution_count": 1,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -151,7 +151,7 @@
         "id": "bzJdawXG_rSi",
         "outputId": "ab5e6d5e-9520-4339-96e6-f737abc50cff"
       },
-      "execution_count": 49,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -199,7 +199,7 @@
         "id": "JF5wsOmVIN71",
         "outputId": "53d1e7f8-f1e9-487c-bfd2-cff7a8b1f47c"
       },
-      "execution_count": 65,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -247,13 +247,105 @@
         "\n",
         "# O sistema devera verificar:\n",
         "# Se houver suficiente - realizar o saque\n",
-        "# Se não houver saldo suficiente -"
+        "# Se não houver saldo suficiente -\n",
+        "\n",
+        "saldo = 1000.00\n",
+        "opcao = 0\n",
+        "\n",
+        "print(\"Bem-vindo ao Caixa Eletrônico!\")\n",
+        "\n",
+        "while opcao != 4:\n",
+        "  print(\"\\n--- Menu --- \")\n",
+        "  print(\"1 - Ver Saldo\")\n",
+        "  print(\"2 - Depositar Dinheiro\")\n",
+        "  print(\"3 - Sacar Dinheiro\")\n",
+        "  print(\"4 - Sair\")\n",
+        "  print(\"------------\")\n",
+        "\n",
+        "  try:\n",
+        "    opcao = int(input(\"Digite a opção desejada: \"))\n",
+        "\n",
+        "    if opcao == 1:\n",
+        "      print(f\"Seu saldo atual é de R$ {saldo:.2f}\")\n",
+        "    elif opcao == 2:\n",
+        "      valor_deposito = float(input(\"Digite o valor a ser depositado: \"))\n",
+        "      if valor_deposito > 0:\n",
+        "        saldo += valor_deposito\n",
+        "        print(f\"Depósito de R$ {valor_deposito:.2f} realizado com sucesso. Novo saldo: R$ {saldo:.2f}\")\n",
+        "      else:\n",
+        "        print(\"Valor de depósito inválido. Digite um valor positivo.\")\n",
+        "    elif opcao == 3:\n",
+        "      valor_saque = float(input(\"Digite o valor a ser sacado: \"))\n",
+        "      if valor_saque > 0:\n",
+        "        if saldo >= valor_saque:\n",
+        "          saldo -= valor_saque\n",
+        "          print(f\"Saque de R$ {valor_saque:.2f} realizado com sucesso. Novo saldo: R$ {saldo:.2f}\")\n",
+        "        else:\n",
+        "          print(\"Saldo insuficiente para realizar o saque.\")\n",
+        "      else:\n",
+        "        print(\"Valor de saque inválido. Digite um valor positivo.\")\n",
+        "    elif opcao == 4:\n",
+        "      print(\"Obrigado por usar o Caixa Eletrônico! Volte sempre.\")\n",
+        "    else:\n",
+        "      print(\"Opção inválida. Por favor, escolha uma opção de 1 a 4.\")\n",
+        "  except ValueError:\n",
+        "    print(\"Entrada inválida. Por favor, digite um número para a opção e para os valores.\")\n",
+        "  except Exception as e:\n",
+        "    print(f\"Ocorreu um erro inesperado: {e}\")"
       ],
       "metadata": {
-        "id": "boPYVDviHCOO"
+        "id": "boPYVDviHCOO",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6ce30ff5-1233-465c-95e2-eca3ad391c70"
       },
       "execution_count": null,
-      "outputs": []
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bem-vindo ao Caixa Eletrônico!\n",
+            "\n",
+            "--- Menu --- \n",
+            "1 - Ver Saldo\n",
+            "2 - Depositar Dinheiro\n",
+            "3 - Sacar Dinheiro\n",
+            "4 - Sair\n",
+            "------------\n",
+            "Digite a opção desejada: 1\n",
+            "Seu saldo atual é de R$ 1000.00\n",
+            "\n",
+            "--- Menu --- \n",
+            "1 - Ver Saldo\n",
+            "2 - Depositar Dinheiro\n",
+            "3 - Sacar Dinheiro\n",
+            "4 - Sair\n",
+            "------------\n",
+            "Digite a opção desejada: 2\n",
+            "Digite o valor a ser depositado: 150\n",
+            "Depósito de R$ 150.00 realizado com sucesso. Novo saldo: R$ 1150.00\n",
+            "\n",
+            "--- Menu --- \n",
+            "1 - Ver Saldo\n",
+            "2 - Depositar Dinheiro\n",
+            "3 - Sacar Dinheiro\n",
+            "4 - Sair\n",
+            "------------\n",
+            "Digite a opção desejada: 3\n",
+            "Digite o valor a ser sacado: 1500\n",
+            "Saldo insuficiente para realizar o saque.\n",
+            "\n",
+            "--- Menu --- \n",
+            "1 - Ver Saldo\n",
+            "2 - Depositar Dinheiro\n",
+            "3 - Sacar Dinheiro\n",
+            "4 - Sair\n",
+            "------------\n"
+          ]
+        }
+      ]
     }
   ]
 }
